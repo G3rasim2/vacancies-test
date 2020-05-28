@@ -1,0 +1,234 @@
+.vacancies
+	& h1
+		font-size: 24px
+		line-height: 29px
+		color: #333333
+	& label
+		font-weight: 600
+		font-size: 14px
+		line-height: 19px
+		color: #858997
+		& select
+			position: relative
+			appearance: none
+			display: block
+			width: 70%
+			max-width: 500px
+			height: 43px
+			padding: 12px
+			margin-top: 10px
+			border: 1px solid #E9ECED
+			border-radius: 5px
+			background: url('../img/arrow-select.svg') no-repeat right 12px center
+			font-weight: 500
+			font-size: 14px
+			line-height: 19px
+			color: #333333
+			transition: .2s
+		& select:hover,
+		& select:focus
+			border-color: #bbb
+	&__list
+		list-style: none
+		padding: 0
+		margin: 0
+		margin-top: 48px
+		width: 100%
+		max-width: 765px
+	&__item
+		margin-bottom: 16px
+		border: 1px solid #F2F7FB
+		border-radius: 5px
+		&-wrap
+			position: relative
+			background: #F2F7FB
+			border-radius: 5px
+			padding: 15px 25px
+			padding-right: 60px
+			& label
+				position: absolute
+				top: calc(50% - 8px)
+				right: 25px
+				width: 16px
+				height: 16px
+				border: none
+				background: url('../img/arrow.svg') no-repeat center
+				transform: rotate(180deg)
+				cursor: pointer
+			& a
+				text-decoration: none
+				font-weight: 600
+				font-size: 14px
+				line-height: 19px
+				color: #333333
+				transition: .2s
+				&:hover
+					color: red
+		& input
+			display: none
+	&__info
+		display: flex
+		font-weight: 500
+		font-size: 14px
+		line-height: 19px
+		color: #0069AB
+		margin-top: 16px
+		& img
+			margin-right: 8px
+		& p
+			margin: 0
+			margin-right: 32px
+			display: flex
+			align-items: center
+	&__description
+		display: none
+		padding: 32px 25px
+		& p
+			font-weight: 500
+			font-size: 14px
+			line-height: 19px
+			margin-top: 0
+			margin-bottom: 28px
+			color: #333333
+		& .vacancies__description-margin
+			margin-bottom: 3px
+		& h4
+			font-size: 14px
+			line-height: 19px
+			color: #333333
+			margin-top: 28px
+			margin-bottom: 15px
+		&-list
+			list-style: none
+			padding: 0
+			margin: 0
+			& li
+				position: relative
+				padding-left: 12px
+				font-weight: 500
+				font-size: 14px
+				line-height: 19px
+				color: #333333
+			& li:before
+				content: ''
+				position: absolute
+				top: 7px
+				left: 0
+				width: 3px
+				height: 3px
+				border-radius: 50%
+				background: #0069AB
+		&-tabs
+			list-style: none
+			padding: 0
+			margin: 0
+			display: flex
+			align-items: center
+			flex-wrap: wrap
+			& li
+				font-weight: 500
+				font-size: 14px
+				line-height: 19px
+				color: #0069AB
+				background: #F2F7FB
+				border-radius: 3px
+				padding: 4px
+				margin-right: 8px
+				margin-bottom: 8px
+		& button
+			font-weight: 600
+			font-size: 14px
+			line-height: 17px
+			letter-spacing: 0.03em
+			color: #fff
+			width: 158px
+			height: 45px
+			background: #0069AB
+			border: 1px solid #0069AB
+			border-radius: 5px
+			margin-top: 28px
+			cursor: pointer
+
+
+
+#checkbox-1:checked ~ .vacancies__description
+	display: block
+#checkbox-2:checked ~ .vacancies__description
+	display: block
+#checkbox-3:checked ~ .vacancies__description
+	display: block
+#checkbox-4:checked ~ .vacancies__description
+	display: block
+#checkbox-5:checked ~ .vacancies__description
+	display: block
+#checkbox-6:checked ~ .vacancies__description
+	display: block
+#checkbox-7:checked ~ .vacancies__description
+	display: block
+#checkbox-8:checked ~ .vacancies__description
+	display: block
+
+#checkbox-1:checked ~ .vacancies__item-wrap label[for="checkbox-1"]
+	transform: rotate(0deg)
+#checkbox-2:checked ~ .vacancies__item-wrap label[for="checkbox-2"]
+	transform: rotate(0deg)
+#checkbox-3:checked ~ .vacancies__item-wrap label[for="checkbox-3"]
+	transform: rotate(0deg)
+#checkbox-4:checked ~ .vacancies__item-wrap label[for="checkbox-4"]
+	transform: rotate(0deg)
+#checkbox-5:checked ~ .vacancies__item-wrap label[for="checkbox-5"]
+	transform: rotate(0deg)
+#checkbox-6:checked ~ .vacancies__item-wrap label[for="checkbox-6"]
+	transform: rotate(0deg)
+#checkbox-7:checked ~ .vacancies__item-wrap label[for="checkbox-7"]
+	transform: rotate(0deg)
+#checkbox-8:checked ~ .vacancies__item-wrap label[for="checkbox-8"]
+	transform: rotate(0deg)
+
+@media (max-width: 500px)
+	.vacancies
+		& h1
+			font-size: 20px
+			line-height: 25px
+		& label
+			font-weight: 500
+			font-size: 12px
+			line-height: 18px
+			& select
+				width: 100%
+				max-width: auto
+				height: 43px
+				margin-top: 8px
+		&__list
+			margin-top: 32px
+		&__item
+			margin-bottom: 20px
+			border: none
+			border-bottom: 1px solid #F5F5F5
+			border-radius: 0
+			&-wrap
+				background: none
+				border-radius: 0
+				padding: 0
+				padding-bottom: 15px
+				& label
+					top: 0
+					right: 0
+					width: 100%
+					height: 100%
+					background: none
+					transform: rotate(180deg)
+					cursor: pointer
+		&__info
+			flex-wrap: wrap
+			font-weight: 600
+			font-size: 12px
+			line-height: 18px
+			margin-top: 12px
+			& p
+				margin-bottom: 7px
+		&__description
+			padding: 0
+			& button
+				line-height: 19px
+				width: 100%
